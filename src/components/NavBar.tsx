@@ -1,14 +1,16 @@
+import { motion } from "motion/react";
 function Navbar(){
 return(
-    <nav className="flex justify-between items-center space-x-1 px-4 py-12">
-        <div className="flex-5"/>
 
-        <div className="flex-3 flex bg-black1 rounded-4xl">
-            <button className="flex-1 mx-1 rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">About</button>
-            <button className="flex-1 mx-1 rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">Projects</button>
-            <button className="flex-1 mx-1 rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">Info</button>
-        </div>
-        <div className="flex-5"/>
+    <nav className="flex fixed w-full justify-between items-center space-x-1 my-8">
+        <div className="flex-8"/>
+
+        <motion.div className="flex-3 px-2 flex border-4 border-white  bg-black1 rounded-4xl" initial={{y: -100 }} animate={{y: 0}} transition={{duration: 1.5, ease: "backOut"}}>
+            <button className="flex-1 text-s rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">About</button>
+            <button className="flex-1 text-s rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">Projects</button>
+            <button className="flex-1 text-s rounded-xl text-center text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 font-bold bg-transparent h-10 mx-2">Info</button>
+        </motion.div>
+        <div className="flex-8"/>
     </nav>
 )
 }

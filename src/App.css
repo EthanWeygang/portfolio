@@ -12,4 +12,8 @@
         --color-black4: #2e2e2e;
         --color-orange1: #f78166;
         --color-purple1: #8957e5;
+
+}
+body {
+  font-family: "IBM Plex Sans", sans-serif;
 }
