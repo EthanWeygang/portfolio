@@ -25,32 +25,37 @@ function Home() {
 
 
                 {/* About */}
-                <div className="h-[500px]" />
+                <div className="h-[1000px]" />
+
 
                 
-                <div className="flex">
-                <Card children={
-                    <div className="w-full flex flex-col justify-between h-full">
-                        
-                        <div className="flex-2 flex items-start justify-start">
-                            <div className="text-3xl text-[#000000] ml-6 mt-2">Nimbus</div>
-                        </div>
-                        <div className="w-full flex justify-center items-center">
-                            <div className="flex-2 mx-5 border-gray-400 border-8 rounded-xl flex bg-white w-full justify-center items-center">
-
-                                <img src="./nimbus.png" className="rounded-4xl h-60 w-max p-8"/>
-                            </div>
-                        </div>
-
-                        {/* <div className="flex-1"/> */}
-                        <div className="flex-6 leading-snug text-xl text-black p-4 bg-[#87469465] m-4 rounded-xl">
-                            Created an AWS hosted full-stack cloud storage website with a Spring Rest API backend where users can upload, retrieve, or delete files from an S3 bucket at any time.
-                        </div>
-
+                
+                <div className="flex w-full h-full">
+                    <div className="flex w-full h-150 justify-center items-center">
+                        <div className="text-5xl">Projects</div>
                     </div>
-                }/>
-                <Energy/>
-                <Card children={""}/>
+
+                    <div className="flex gap-x-6">
+                        <Card bg={"bg-[#ffffff]"} children={
+                            <>
+                            <img src="./nimbus.png" className="absolute top-19 opacity-100 rounded-3xl h-50 w-max p-8 z-6"/>
+                            <div className="absolute text-2xl text-[#000000] z-6 left-25 top-5">Nimbus</div>
+                            </>
+                        }/>
+
+                        <Energy/>
+
+                        <Card bg={"bg-[#6fcacd]"} children={
+                            <>
+                            <img src="./posture3.png" className="absolute top-3 opacity-100 rounded-3xl h-80 w-max p-8 z-4"/>
+                            <div className="absolute text-2xl text-[#000000] z-6 left-25 top-5">Posture Checker</div>
+                            </>
+                        }/>
+                    </div>
+
+                    <div className="flex w-full h-150 justify-center items-center">
+                        <div className="text-5xl ">Projects</div>
+                    </div>
                 </div>
                 
 

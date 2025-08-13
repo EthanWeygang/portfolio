@@ -1,5 +1,3 @@
-import HoverWord from "./HoverWord";
-
 interface BackBoardProps {
     children: React.ReactNode;
 }
@@ -7,12 +5,10 @@ interface BackBoardProps {
 function BackBoard({ children }: BackBoardProps){
     return(
 
-    <div className="flex justify-between ">
-        <div className="flex-1"/>
-        <div className="bg-transparent p-10 flex-13 flex flex-col items-center rounded-4xl text-white font-bold " >
+    <div className="flex justify-between">
+        <div className="bg-transparent p-10 flex-13 flex flex-col items-center text-white" >
             {children}
         </div>
-        <div className="flex-1"/>
     </div>
 
     );
