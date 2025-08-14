@@ -1,14 +1,15 @@
 function Info(){
     return(
-                        <div className="w-9/10 grid grid-cols-2 gap-4 justify-between flex-wrap">
-                    <div className="bg-black1 border-white border-3 flex-1 rounded-xl p-2 m-2">x</div>
+        <>
+        <div className="text-center text-4xl mb-10">Links</div>
 
-                    <div className="bg-black1 flex-1 max-w-full border-3 max-h-full rounded-xl p-2 m-2">x</div>
+        <div className="w-1/3 grid grid-cols-2 h-20 text-center">
+            <a href="https://github.com/ethanweygang" className="text-2xl m-4">Github</a>
+            <a href="https://www.linkedin.com/in/ethan-weygang-8a90301b2/" className="text-2xl m-4">Linkedin</a>
+            <p className="text-2xl m-4">ethanweygang@gmail.com</p>
 
-                    <div className="bg-black1 flex-1 max-w-full border-3 max-h-full rounded-xl p-2 m-2">x</div>
-
-                    <div className="bg-black1 flex-1 max-w-full border-3 max-h-full rounded-xl p-2 m-2">x</div>
-                </div>
+        </div>
+        </>
     )
 }
 

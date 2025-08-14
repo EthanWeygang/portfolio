@@ -20,6 +20,7 @@ function Card({ image, bg, children }: CardProps){
 
     return(
         <div className="mx-3">
+            
             {/* Card's Back*/} 
             <motion.img src="/pokemon-card.png" className={`h-150 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
             animate={
@@ -59,9 +60,8 @@ function Card({ image, bg, children }: CardProps){
             }}>
                 
                 
-
                    <div className="flex items-center justify-center">
-                    <img src={image} className="w-full h-full object-cover z-5" />
+                    <img src={image} className={`w-full h-full object-cover z-5 ${image.includes("energy") ? "opacity-74" : ""}`} />
                     {children}
                     </div>
 
