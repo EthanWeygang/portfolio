@@ -4,9 +4,10 @@ import { useState } from "react";
 interface CardProps {
     children: React.ReactNode;
     bg: string;
+    image: string;
 }
 
-function Card({ bg, children }: CardProps){
+function Card({ image, bg, children }: CardProps){
     const [clicked, setClicked] = useState(false);
     const [zRotationValue] = useState(() => getRandomInt(3, 2))
     const [xRotationValue] = useState(() => getRandomInt(15, 10))
@@ -31,9 +32,10 @@ function Card({ bg, children }: CardProps){
                 scale: 1.03, rotateZ: zRotationValue, rotateX: xRotationValue, rotateY: xRotationValue
             }}
             transition={{
-                duration: clicked ? 0.5 : 1,
                 opacity: clicked ? {times: [0,  0.90, 1]} : {times: [0, 1]},
-                ease: "backOut"
+                ease: "backOut",
+                y: {duration: 1},
+                scale: {duration: 0.5}
             }}/>
 
 
@@ -51,14 +53,15 @@ function Card({ bg, children }: CardProps){
                 scale: 1.03, rotateZ: zRotationValue, rotateX: xRotationValue, rotateY: xRotationValue
             }}
             transition={{
-                delay: clicked ? 0 : 0.7,
-                duration: 0.4
+                y: {duration: 1, delay: 0.7},
+                opacity: {delay: 0.7},
+                scale: {duration: 0.4}
             }}>
                 
                 
 
                    <div className="flex items-center justify-center">
-                    <img src="/template.png" className="w-full h-full object-cover z-5" />
+                    <img src={image} className="w-full h-full object-cover z-5" />
                     {children}
                     </div>
 

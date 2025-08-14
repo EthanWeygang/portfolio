@@ -5,7 +5,6 @@ import HoverWord from "../components/HoverWord";
 import Info from "../components/Info";
 import { useState } from "react";
 import Card from "../components/Card";
-import Energy from "../components/Energy";
 
 function Home() {
     
@@ -36,16 +35,16 @@ function Home() {
                     </div>
 
                     <div className="flex gap-x-6">
-                        <Card bg={"bg-[#ffffff]"} children={
+                        <Card image={"./template.png"} bg={"bg-[#ffffff]"} children={
                             <>
                             <img src="./nimbus.png" className="absolute top-19 opacity-100 rounded-3xl h-50 w-max p-8 z-6"/>
                             <div className="absolute text-2xl text-[#000000] z-6 left-25 top-5">Nimbus</div>
                             </>
                         }/>
 
-                        <Energy/>
+                        <Card image={"./energy.webp"} bg={"bg-[#ffffff]"} children={""}/>
 
-                        <Card bg={"bg-[#6fcacd]"} children={
+                        <Card image={"./template.png"} bg={"bg-[#6fcacd]"} children={
                             <>
                             <img src="./posture3.png" className="absolute top-3 opacity-100 rounded-3xl h-80 w-max p-8 z-4"/>
                             <div className="absolute text-2xl text-[#000000] z-6 left-25 top-5">Posture Checker</div>
