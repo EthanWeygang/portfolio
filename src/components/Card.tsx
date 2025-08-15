@@ -19,7 +19,7 @@ function Card({ image, bg, children }: CardProps){
       }
 
     return(
-        <div className="mx-3">
+        <div className="mx-3 mt-5">
             
             {/* Card's Back*/} 
             <motion.img src="/pokemon-card.png" className={`h-150 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
@@ -43,6 +43,12 @@ function Card({ image, bg, children }: CardProps){
             {/* nice purple - #af58c0 */}
             {/* Card's Front */}
             <motion.div className={`relative ${bg} h-150 w-107 rounded-3xl flex overflow-hidden ${clicked ? 'curser-pointer' : 'pointer-events-none'}`} 
+            style={{
+                backgroundImage: `url(${image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}
             animate={
                 clicked ? {opacity: 1, y: -600} : {scale: 1}
             }
@@ -60,8 +66,7 @@ function Card({ image, bg, children }: CardProps){
             }}>
                 
                 
-                   <div className="flex items-center justify-center">
-                    <img src={image} className={`w-full h-full object-cover z-5 ${image.includes("energy") ? "opacity-74" : ""}`} />
+                   <div className="flex items-center justify-center w-full h-full">
                     {children}
                     </div>
 
