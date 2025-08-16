@@ -12,8 +12,8 @@ function Home() {
     return (
         <>
         {/* <div className="fixed inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_50%,#141414_70%)]"></div> */}
-        <div className="fixed inset-0 bg-black w-full h-full -z-10 pointer-events-none overflow-x-hidden"></div>
-            <div className="fixed inset-0 -z-9 bg-[url('/clean-gray-paper.png')] bg-repeat opacity-[0.1] pointer-events-none"></div>
+        <div className="fixed inset-0 bg-black w-full h-full -z-10 pointer-events-none"></div>
+            <div className="fixed inset-0 -z-9 bg-[url('/clean-gray-paper.png')] bg-repeat opacity-[0.15] pointer-events-none"></div>
             <NavBar />
             <BackBoard>
                 <div className="h-[200px]" />
@@ -32,7 +32,7 @@ function Home() {
                     }}
                     transition={{
                     duration: 1.5,
-                    delay: 1.5,
+                    delay: 1,
                     }}>
                     <p>Computer Science Major</p>
                     <p>University of Greenwich</p>
@@ -51,7 +51,7 @@ function Home() {
                     }}
                     transition={{
                     duration: 1.5,
-                    delay: 2.2,
+                    delay: 1.5,
                     }}>
                     <p>Third-year Computer Science student with confidence in building full-stack applications using Java, Spring Boot, AWS, Docker and React.</p>
                     <p>Passionate about cloud infrastructure and software development, with multiple personal projects deployed using real-world stacks. </p>
@@ -63,30 +63,49 @@ function Home() {
 
 
                 <div className="flex w-full h-200">
-                    <div className="flex w-full h-150 justify-center items-center">
-                        <motion.div  className="text-5xl -rotate-90">Projects</motion.div >
-                    </div>
+                    
 
-                    <div className="flex w-full h-full">
-                        <div className="flex gap-x-6">
+                    {/* <div className="flex w-[218px] h-150 justify-center items-center">
+                        <motion.div  className="text-5xl -rotate-90"
+                        animate= {{
+                            x: 0
+                        }}
+                        transition={{
+                            delay: 1,
+                            duration: 1.5,
+                            ease: "backOut"
+                        }}
+                        initial={{x: -700}}
+                        >Projects</motion.div >
+                    </div> */}
+
+                    <div className="flex w-full h-160 ">
+                        <div className="flex w-full gap-x-6 justify-center h-full items-center pt-46">
 
                             <Card image={"./template.png"} bg={"bg-[#ffffff]"} children={
                                 <>
-                                <img src="./nimbus.png" className="absolute top-19 opacity-100 rounded-3xl h-50 w-max p-8 z-6"/>
+                                <img src="./nimbus.png" className="absolute top-24 opacity-100 h-40 w-max p-8 z-6"/>
                                 <div className="absolute text-xl text-[#000000] z-6 left-25 top-6">Nimbus</div>
                                 </>
                             }/>
 
                             <Card image={"./energy.webp"} bg={"bg-[#000000]"} children={""}/>
 
-                            <Card image={"./template.png"} bg={"bg-[#6fcacd]"} children={
+                            <Card image={"./template.png"} bg={"bg-[#ffffff]"} children={
                                 <>
-                                <img src="./posture3.png" className="absolute top-20 opacity-100 rounded-3xl h-50 w-max p-8 z-4"/>
+                                <img src="./posture.png" className="absolute top-19 opacity-100 h-50 w-max p-8 z-4"/>
                                 <div className="absolute text-xl text-[#000000] z-6 left-25 top-6">Posture Checker</div>
+                                <p className="absolute bottom-60 text-xl text-black">Technologies</p>
+                                <p className="absolute bottom-54 text-sm text-black">React - AWS - Springboot</p>
+
+                                <p className="absolute bottom-42 text-xl text-black">About</p>
+                                <p className="absolute bottom-36 text-sm text-black">Chrome Timer which reminds you to straighten your</p>
+                                <p className="absolute bottom-32 text-sm text-black">posture with notifications. Maintains 15 - 20 organic</p>
+                                <p className="absolute bottom-28 text-sm text-black">daily users.</p>
                                 </>
                             }/>
 
-
+                            <Card image={"./energy.webp"} bg={"bg-[#000000]"} children={""}/>
                         </div>
                     </div>
                 </div>
