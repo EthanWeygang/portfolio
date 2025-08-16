@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import useSound from 'use-sound';
+import { Tilt } from '../../components/motion-primitives/tilt';
 
 interface CardProps {
     children: React.ReactNode;
@@ -10,8 +11,6 @@ interface CardProps {
 
 function Card({ image, bg, children }: CardProps){
     const [clicked, setClicked] = useState(false);
-    const [zRotationValue] = useState(() => getRandomInt(3, 2))
-    const [xRotationValue] = useState(() => getRandomInt(15, 10))
     const [playSlideOut] = useSound('/sounds/zapsplat_leisure_playing_card_dealing_table_single_001_20443.mp3', {
         volume: 0.25
     })
@@ -23,14 +22,8 @@ function Card({ image, bg, children }: CardProps){
         
     })
 
-    function getRandomInt(max: number, min: number) {
-        const num = Math.floor(Math.random() * (max - min + 1)) + min;
-        const sign = Math.random() < 0.5 ? 1 : -1;
-        return num * sign;
-      }
-
     return(
-        <div className="relative mx-3 mt-5">
+        <Tilt className="relative mx-3 mb-50">
             
             {/* Card's Back*/} 
             <motion.img src="/pokemon-card.png" className={`h-150 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
@@ -39,9 +32,6 @@ function Card({ image, bg, children }: CardProps){
             }
             initial={{
                 y: 700,
-            }}
-            whileHover={{
-                scale: 1.03, rotateZ: zRotationValue, rotateX: xRotationValue, rotateY: xRotationValue
             }}
             transition={{
                 opacity: clicked ? {times: [0,  0.90, 1]} : {times: [0, 1]},
@@ -54,10 +44,9 @@ function Card({ image, bg, children }: CardProps){
                 setTimeout(() => {playSlideIn()}, 700)
             }}
             onHoverStart={(e) => {
-                playTouch()
+                /* playTouch() */
             }}
             />
-
 
             {/* nice purple - #af58c0 */}
             {/* Card's Front */}
@@ -76,31 +65,23 @@ function Card({ image, bg, children }: CardProps){
                 y: -900,
                 opacity: 0
             }}
-            whileHover={{
-                scale: 1.03, rotateZ: zRotationValue, rotateX: xRotationValue, rotateY: xRotationValue
-            }}
             transition={{
                 y: {duration: 0.5, delay: 0.7},
                 opacity: {delay: 0.7},
                 scale: {duration: 0.4},
-            }}
-            onHoverStart={() => {playTouch()}}>
+            }}>
                 
                 
-                   <div className="flex items-center justify-center w-full h-full">
+                <div className="flex items-center justify-center w-full h-full">
                     {children}
-                    </div>
-
-
-
-                
+                </div>
 
             </motion.div>
-            
 
             
-        </div>
+        </Tilt>
     )
 }
 
 export default Card;
+

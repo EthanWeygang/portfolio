@@ -1,11 +1,20 @@
+import { TextShimmerWave } from '../../components/motion-primitives/text-shimmer-wave';
 function Info(){
     return(
         <>
-        <div className="text-center text-4xl mb-10">Links</div>
+        <div className="flex flex-col items-center justify-center">
+            <div className="text-center text-5xl mb-10">
+                <TextShimmerWave className='[--base-color:#FFFFFF] [--base-gradient-color:#af58c0]' duration={2}>
+                Links
+                </TextShimmerWave>
+                </div>
 
-        <div className="w-1/3 grid grid-cols-2 h-20 text-center">
-            <a href="https://github.com/ethanweygang" className="text-2xl m-4">Github</a>
-            <a href="https://www.linkedin.com/in/ethan-weygang-8a90301b2/" className="text-2xl m-4">Linkedin</a>
+            <div className="flex justify-center">
+                <a href="https://github.com/ethanweygang" className="text-2xl m-8">Github</a>
+                <p className="text-2xl m-8">CV</p>
+                <a href="https://www.linkedin.com/in/ethan-weygang-8a90301b2/" className="text-2xl m-8">Linkedin</a>
+                
+            </div>
         </div>
         </>
     )

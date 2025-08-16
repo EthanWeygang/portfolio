@@ -16,7 +16,7 @@ function HoverWord({ word }: HoverWordProps){
     return(
         <div className="flex">
             {word.split('').map((char, i) => (
-                <motion.div className="transition duration-300 ease-in-out hover:scale-150 hover:text-[#af58c0] text-8xl" 
+                <motion.div className="transition duration-300 ease-in-out hover:scale-150 text-8xl" 
                 transition={{
                     ease: "easeInOut", 
                     duration: 0.5, 
