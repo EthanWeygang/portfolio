@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
 @import "tailwindcss";
+
 
 @theme {
         --color-pale: #F4FEC1;
@@ -12,6 +15,7 @@
         --color-black4: #2e2e2e;
         --color-orange1: #f78166;
         --color-purple1: #8957e5;
+        --font-orbitron: "Orbitron", sans-serif;
 
 }
 body {

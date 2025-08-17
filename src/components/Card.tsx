@@ -17,16 +17,16 @@ function Card({ image, bg, children }: CardProps){
         const [playSlideIn] = useSound('/sounds/zapsplat_leisure_playing_card_single_turn_over_on_table_001_20473.mp3', {
         volume: 0.25
     })
-    const [playTouch] = useSound('/sounds/zapsplat_leisure_playing_card_single_place_down_on_table_001_20464.mp3', {
-        volume: 0.15,
+    // const [playTouch] = useSound('/sounds/zapsplat_leisure_playing_card_single_place_down_on_table_001_20464.mp3', {
+    //     volume: 0.15,
         
-    })
+    // })
 
     return(
         <Tilt className="relative mx-3 mb-50">
             
             {/* Card's Back*/} 
-            <motion.img src="/pokemon-card.png" className={`h-150 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
+            <motion.img src="/pokemon-card.png" className={`h-120 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
             animate={
                 clicked ? { y: -900, opacity: [1, 0, 0]} : {y: 0, opacity: [0,1]}
             }
@@ -43,14 +43,14 @@ function Card({ image, bg, children }: CardProps){
                 playSlideOut()
                 setTimeout(() => {playSlideIn()}, 700)
             }}
-            onHoverStart={(e) => {
-                /* playTouch() */
-            }}
+            // onHoverStart={(e) => {
+            //     /* playTouch() */
+            // }}
             />
 
             {/* nice purple - #af58c0 */}
             {/* Card's Front */}
-            <motion.div className={`absolute top-150 ${bg} h-150 w-107 rounded-3xl flex overflow-hidden ${clicked ? 'curser-pointer' : 'pointer-events-none'}`} 
+            <motion.div className={`absolute top-150 ${bg} h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'curser-pointer' : 'pointer-events-none'}`} 
             style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
@@ -58,7 +58,7 @@ function Card({ image, bg, children }: CardProps){
                 backgroundRepeat: 'no-repeat'
             }}
             animate={
-                clicked ? {opacity: 1, y: -600} : {scale: 1}
+                clicked ? {opacity: image.includes("energy") ? 0.76 : 1, y: -600} : {scale: 1}
                 
             }
             initial={{

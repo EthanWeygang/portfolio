@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '../../lib/utils';
-import { motion, Transition } from 'motion/react';
+import { motion, type Transition } from 'motion/react';
 
 export type GlowEffectProps = {
   className?: string;
@@ -40,7 +40,7 @@ export function GlowEffect({
   const BASE_TRANSITION = {
     repeat: Infinity,
     duration: duration,
-    ease: 'linear',
+    ease: [0.25, 0.25, 0.75, 0.75], // Use a valid cubic bezier easing array
   };
 
   const animations = {
@@ -139,7 +139,7 @@ export function GlowEffect({
           backfaceVisibility: 'hidden',
         } as React.CSSProperties
       }
-      animate={animations[mode]}
+  animate={animations[mode] as any}
       className={cn(
         'pointer-events-none absolute inset-0 h-full w-full',
         'scale-[var(--scale)] transform-gpu',

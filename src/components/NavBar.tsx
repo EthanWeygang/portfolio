@@ -18,7 +18,7 @@ return(
                 mode='breathe'
                 blur='soft'
                 duration={3}
-                scale={1.08}
+                scale={1.03}
                 className="z-0 rounded-3xl"
 
                 />
