@@ -30,10 +30,10 @@ function Bio(){
             duration: 1.5,
             delay: 1.5,
             }}>
-            <p>Hi! I'm Ethan, a rising third year computer science major at the University of Greenwich.</p>
-            <p>My main interests are in Software engineering and Cloud infrastructure.</p>
-            
-            <p>I'm actively looking for internships or work!</p>
+
+            <p> I'm a rising third year computer science major at the University of Greenwich.</p>
+            <p>My main interests are in Software engineering and Cloud engineering.</p>
+        
             
         </motion.div>
         </>
