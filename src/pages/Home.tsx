@@ -36,7 +36,7 @@ function Home() {
                     <div className="flex w-full gap-x-6 justify-center h-full items-center pt-46">
 
                         {/* Nimbus */}
-                        <Card image={"./template.png"} bg={" bg-[#b9e6ae]"} link={"https://dx26d5982gukc.cloudfront.net/"} children={
+                        <Card image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
                             <>
                             <img src="./nimbus.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">Nimbus</div>
@@ -56,7 +56,7 @@ function Home() {
                         }/>
 
                         {/* Bloodsend */}
-                        <Card image={"./template.png"} bg={"bg-[#ed6a64]"} link={"https://bloodsend.onrender.com/"} children={
+                        <Card image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
                             <>
                             <img src="./blood.png" className="absolute top-11 opacity-100 h-50 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">BloodSend</div>
@@ -75,7 +75,7 @@ function Home() {
                         }/>
 
                         {/* Posture Checker */}
-                        <Card image={"./template.png"} bg={"bg-[#a9dbdb]"} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
+                        <Card image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
                             <>
                             <img src="./posture.png" className="absolute top-10 opacity-100 h-50 w-max p-8 z-4"/>
 

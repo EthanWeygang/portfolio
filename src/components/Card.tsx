@@ -53,9 +53,10 @@ function Card({ image, bg, children, link }: CardProps){
             {/* Card's Front */}
             <motion.div className={`absolute top-150 ${bg} h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'}`} 
             style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+
+                backgroundImage: "url('/background2.png')",
+                backgroundSize: '300px',
+                backgroundPosition: 'top',
                 backgroundRepeat: 'no-repeat'
             }}
             animate={
@@ -76,9 +77,11 @@ function Card({ image, bg, children, link }: CardProps){
                     window.open(link, '_blank', 'noopener,noreferrer')
                 }
             }}>
+
+                <motion.img src="/template.png" className={""}/>
                 
                 
-                <div className="flex items-center justify-center w-full h-full">
+                <div className="flex items-center justify-center w-full h-full absolute">
                     {children}
                 </div>
 
