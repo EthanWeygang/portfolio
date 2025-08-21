@@ -22,7 +22,7 @@ function About(){
                     I'm third-year Computer Science student who enjoys building full-stack applications using Java, Spring Boot, AWS, Docker and React (but I'm constantly trying new technologies!!).
                     </div>
                     <div>
-                        I'm passionate about cloud infrastructure and software development, with multiple personal projects already made, and many more in the pipeline!
+                        I'm passionate about cloud engineering and software development, with multiple personal projects already made, and many more in the pipeline!
                     </div>
                     <div>
                         Currently, I'm preparing to take the AWS Cloud Practitioner certification and applying to a lot of internships for the summer, or whenever, really. 

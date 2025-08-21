@@ -38,7 +38,7 @@ function Home() {
                         {/* Nimbus */}
                         <Card image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
                             <>
-                            <img src="./nimbus.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
+                            <img src="./nimbussticker2.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">Nimbus</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
@@ -58,7 +58,7 @@ function Home() {
                         {/* Bloodsend */}
                         <Card image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
                             <>
-                            <img src="./blood.png" className="absolute top-11 opacity-100 h-50 w-max p-8 z-6"/>
+                            <img src="./bloodsticker2.png" className="absolute rotate-23 top-11 opacity-100 h-50 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">BloodSend</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
@@ -77,7 +77,7 @@ function Home() {
                         {/* Posture Checker */}
                         <Card image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
                             <>
-                            <img src="./posture.png" className="absolute top-10 opacity-100 h-50 w-max p-8 z-4"/>
+                            <img src="./posturesticker3.png" className="absolute rotate-353 top-10 opacity-100 h-50 w-max p-8 z-4"/>
 
                             <div className="absolute text-sm font-orbitron text-[#000000] font-bold z-6 left-20 top-5">Posture Checker</div>
                             

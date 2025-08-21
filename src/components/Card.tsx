@@ -49,16 +49,16 @@ function Card({ image, bg, children, link }: CardProps){
             // }}
             />
 
-            {/* nice purple - #af58c0 */}
-            {/* Card's Front */}
-            <motion.div className={`absolute top-150 ${bg} h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'}`} 
-            style={{
 
-                backgroundImage: "url('/background2.png')",
-                backgroundSize: '300px',
-                backgroundPosition: 'top',
-                backgroundRepeat: 'no-repeat'
-            }}
+            {/* Card's Front */}
+            {/* nice purple - #af58c0 */}
+            <motion.div className={`absolute top-150 ${bg} bg-gray-200 h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-gradient-to-br from-[#f5f7fa] via-[#c3cfe2] to-[#a1c4fd]`} 
+            // style={{
+            //     backgroundImage: "url('/clean-gray-paper.png')",
+            //     backgroundSize: '300px',
+            //     backgroundPosition: 'top',
+            //     backgroundRepeat: 'no-repeat'
+            // }}
             animate={
                 clicked ? {opacity: image.includes("energy") ? 0.76 : 1, y: -600} : {scale: 1}
                 
@@ -78,7 +78,7 @@ function Card({ image, bg, children, link }: CardProps){
                 }
             }}>
 
-                <motion.img src="/template.png" className={""}/>
+                <motion.img src={image.includes("energy") ? "/energy.webp" :"/template.png"} className={""}/>
                 
                 
                 <div className="flex items-center justify-center w-full h-full absolute">
