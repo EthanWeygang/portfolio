@@ -31,8 +31,8 @@ function Bio(){
             delay: 1.5,
             }}>
 
-            <p> I'm a rising third year computer science major at the University of Greenwich.</p>
-            <p>My main interests are in Software engineering and Cloud engineering.</p>
+            <p>I'm a rising third year Computer Science major at the University of Greenwich.</p>
+            <p>My main interests are in Software Engineering and Cloud Engineering.</p>
         
             
         </motion.div>
