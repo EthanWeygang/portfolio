@@ -8,9 +8,10 @@ interface CardProps {
     bg: string;
     image: string;
     link?: string;
+    onCardClick?: () => void;
 }
 
-function Card({ image, bg, children, link }: CardProps){
+function Card({ image, bg, children, link, onCardClick }: CardProps){
     const [clicked, setClicked] = useState(false);
     const [playSlideOut] = useSound('/sounds/zapsplat_leisure_playing_card_dealing_table_single_001_20443.mp3', {
         volume: 0.25
@@ -23,11 +24,11 @@ function Card({ image, bg, children, link }: CardProps){
         
     // })
 
-    return(
+    return(<>
         <Tilt className="relative mx-3 mb-50">
             
             {/* Card's Back*/} 
-            <motion.img src="/pokemon-card.png" className={`h-120 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => setClicked(true)} 
+            <motion.img src="/pokemon-card.png" className={`h-120 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => {setClicked(true); onCardClick?.();}} 
             animate={
                 clicked ? { y: -900, opacity: [1, 0, 0]} : {y: 0, opacity: [0,1]}
             }
@@ -86,9 +87,12 @@ function Card({ image, bg, children, link }: CardProps){
                 </div>
 
             </motion.div>
+            
 
             
         </Tilt>
+
+        </>
     )
 }
 

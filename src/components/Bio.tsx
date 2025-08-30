@@ -14,7 +14,7 @@ function Bio(){
             delay: 1,
             }}>
             <p>Full Stack Engineer</p>
-            <p>2027 Graduation</p>
+            <p>2026 Graduation</p>
             <p>London</p>
         </motion.div>
 
@@ -31,7 +31,7 @@ function Bio(){
             delay: 1.5,
             }}>
 
-            <p>I'm a rising third year Computer Science major at the University of Greenwich.</p>
+            <p>I'm a rising third-year Computer Science major at the University of Greenwich.</p>
             <p>My main interests are in Software Engineering and Cloud Engineering.</p>
         
             

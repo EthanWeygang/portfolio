@@ -8,10 +8,13 @@ import Background from "../components/Background";
 import { TextShimmerWave } from "../../components/motion-primitives/text-shimmer-wave";
 import About from "../components/About";
 import Bio from "../components/Bio";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 
 function Home() {
-    
+    const [cardClicked, setCardClicked] = useState(false);
+
     return (
         <>
             <Background/>
@@ -32,11 +35,11 @@ function Home() {
                 <div className="h-[130px]" />
 
                 {/* Projects */}
-                <div id="projects" className="flex w-full h-160 ">
+                <div id="projects" className="flex w-full h-160">
                     <div className="flex w-full gap-x-6 justify-center h-full items-center pt-46">
 
                         {/* Nimbus */}
-                        <Card image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
                             <>
                             <img src="./nimbussticker2.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">Nimbus</div>
@@ -55,8 +58,9 @@ function Home() {
                             </>
                         }/>
 
+
                         {/* Bloodsend */}
-                        <Card image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
                             <>
                             <img src="./bloodsticker2.png" className="absolute rotate-23 top-11 opacity-100 h-50 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">BloodSend</div>
@@ -75,7 +79,7 @@ function Home() {
                         }/>
 
                         {/* Posture Checker */}
-                        <Card image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
                             <>
                             <img src="./posturesticker3.png" className="absolute rotate-353 top-10 opacity-100 h-50 w-max p-8 z-4"/>
 
@@ -95,8 +99,21 @@ function Home() {
                         }/>
 
                         {/* Energy */}
-                        <Card image={"./energy.webp"} bg={"bg-[#000000]"} children={""}/>
+                        <Card onCardClick={() => setCardClicked(true)} image={"./energy.webp"} bg={"bg-[#000000]"} children={""}/>
                     </div>
+                </div>
+                <div className="text-white opacity-20">
+                    <AnimatePresence mode="wait">
+                        <motion.span
+                            key={cardClicked ? "clicked" : "initial"}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            {!cardClicked ? "Click the cards" : "Click again to visit the project"}
+                        </motion.span>
+                    </AnimatePresence>
                 </div>
                 
                 <div className="h-[200px]" />
