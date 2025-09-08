@@ -83,7 +83,7 @@ function Home() {
                             <>
                             <img src="./posturesticker3.png" className="absolute rotate-353 top-10 opacity-100 h-50 w-max p-8 z-4"/>
 
-                            <div className="absolute text-sm font-orbitron text-[#000000] font-bold z-6 left-20 top-5">Posture Checker</div>
+                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-20 top-5">Posture Checker</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
                             <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A Chrome Timer which reminds you to </p>
@@ -99,7 +99,24 @@ function Home() {
                         }/>
 
                         {/* Energy */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./energy.webp"} bg={"bg-[#000000]"} children={""}/>
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""}>
+                            <>
+                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-20 top-5">Gre.View</div>
+
+                            <p className="absolute top-23 text-black text-2xl font-bold h-50 w-max p-8 z-4">WIP</p>
+
+                            <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
+                            <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A map website for students of Greenwich</p>
+                            <p className="absolute bottom-40 left-11 font-semibold text-xs text-black"> which lets student find hidden local returants</p>
+                            <p className="absolute bottom-36 left-11 font-semibold text-xs text-black"> rated and reccomended by other students.</p>
+
+                            <p className="absolute bottom-30 left-9 font-semibold text-xs text-black">• I'm currently working on this project!</p>
+
+                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute bottom-20 font-semibold text-xs text-black' duration={2}>
+                                {"React - AWS - Spring Boot"}
+                            </TextShimmerWave>
+                            </>                        
+                        </Card>
                     </div>
                 </div>
                 <div className="text-white opacity-20">
