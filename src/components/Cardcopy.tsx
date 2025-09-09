@@ -29,7 +29,7 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
             
             {/* Card's Back*/}
             {/* change to cardback2.jpg for playing card */}
-            <motion.img src="/cardback2.jpg" className={`rounded-3xl h-120 cursor-pointer brightness-90 ${clicked ? 'pointer-events-none' : ''}`} onClick={() => {setClicked(true); onCardClick?.();}} 
+            <motion.img src="/cardback.png" className={`rounded-3xl h-120 opacity-75 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => {setClicked(true); onCardClick?.();}} 
             animate={
                 clicked ? { y: -900, opacity: [1, 0, 0]} : {y: 0, opacity: [0,1]}
             }
@@ -54,15 +54,9 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
 
             {/* Card's Front */}
             {/* nice purple - #af58c0 */}
-            {/* <motion.div className={`absolute top-150 ${bg} bg-gray-200 h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-gradient-to-br from-[#f5f7fa] via-[#c3cfe2] to-[#a1c4fd]`}  */}
-            {/* For playing card */}
-            <motion.div className={`absolute top-150 ${bg} bg-gray-200 h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-white`}
-            style={{
-                backgroundImage: "url('/card-texture.jpg')",
-                backgroundRepeat: 'repeat',
-                backgroundSize: '500px 500px', // or specify size like '50px 50px'
-                 
-            }}
+            <motion.div className={`absolute top-150 ${bg} bg-gray-200 h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-gradient-to-br from-[#f5f7fa] via-[#c3cfe2] to-[#a1c4fd]`} 
+            // For playing card
+            // <motion.div className={`absolute top-150 ${bg} bg-gray-200 h-120 w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-white`}
             
             animate={
                 clicked ? {opacity: image.includes("energy") ? 0.76 : 1, y: -600} : {scale: 1}
@@ -82,7 +76,7 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
                     window.open(link, '_blank', 'noopener,noreferrer')
                 }
             }}>
-                {/* <motion.img src={image.includes("energy") ? "/energy.webp" :"/template.png"} className={""}/> */}
+                <motion.img src={image.includes("energy") ? "/energy.webp" :"/template.png"} className={""}/>
             
                 
                 <div className="flex items-center justify-center w-full h-full absolute">

@@ -41,10 +41,8 @@ function Home() {
                         {/* Nimbus */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
                             <>
-                            <img src="/hearts.png" className="absolute top-2.5 left-3 w-10.5"/>
-                            <img src="/hearts.png" className="absolute bottom-4 right-3 w-10.5 rotate-180"/>
                             <img src="./nimbussticker2.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
-                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-34 top-4.5">Nimbus</div>
+                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">Nimbus</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
                             <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A full-stack Cloud Storage website, using S3,  </p>
@@ -64,11 +62,8 @@ function Home() {
                         {/* Bloodsend */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
                             <>
-                            <img src="/diamonds.png" className="absolute top-4 left-3 w-10"/>
-                            <img src="/diamonds.png" className="absolute bottom-4 right-3 w-10 rotate-180"/>
-
                             <img src="./bloodsticker2.png" className="absolute rotate-23 top-11 opacity-100 h-50 w-max p-8 z-6"/>
-                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-30 top-4.5">BloodSend</div>
+                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-20 top-4.5">BloodSend</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
                             <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A full-stack express.js website which helps</p>
@@ -86,12 +81,9 @@ function Home() {
                         {/* Posture Checker */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
                             <>
-                            <img src="/spades.png" className="absolute top-4 left-3 w-9"/>
-                            <img src="/spades.png" className="absolute bottom-4 right-3 w-9 rotate-180"/>
-
                             <img src="./posturesticker3.png" className="absolute rotate-353 top-10 opacity-100 h-50 w-max p-8 z-4"/>
 
-                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-25 top-5">Posture Checker</div>
+                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-20 top-5">Posture Checker</div>
                             
                             <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
                             <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A Chrome Timer which reminds you to </p>
@@ -106,13 +98,10 @@ function Home() {
                             </>
                         }/>
 
-                        {/* Gre.View */}
+                        {/* Energy */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""}>
                             <>
-                            <img src="/clubs.png" className="absolute top-4 left-3 w-13"/>
-                            <img src="/clubs.png" className="absolute bottom-4 right-3 w-13 rotate-180"/>
-
-                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-33 top-5">Gre.View</div>
+                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-20 top-5">Gre.View</div>
 
                             <p className="absolute top-23 text-black text-2xl font-bold h-50 w-max p-8 z-4">WIP</p>
 
