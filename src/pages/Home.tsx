@@ -43,20 +43,21 @@ function Home() {
                             <>
                             <img src="/hearts.png" className="absolute top-2.5 left-3 w-10.5"/>
                             <img src="/hearts.png" className="absolute bottom-4 right-3 w-10.5 rotate-180"/>
-                            <img src="./nimbussticker2.png" className="absolute top-15 opacity-100 h-40 w-max p-8 z-6"/>
+                            <img src="./nimbussticker2.png" className="absolute top-24 opacity-100 h-45 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-34 top-4.5">Nimbus</div>
-                            
-                            <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
-                            <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A full-stack Cloud Storage website, using S3,  </p>
-                            <p className="absolute bottom-40 left-11 font-semibold text-xs text-black">Cloudfront, RDS, Elastic Beanstalk and JWT </p>
-                            <p className="absolute bottom-36 left-11 font-semibold text-xs text-black"> authentication.</p>
 
-                            <p className="absolute bottom-30 left-9 font-semibold text-xs text-black">• Users can Upload, Download and Delete their  </p>
-                            <p className="absolute bottom-26 left-11 font-semibold text-xs text-black"> files to and from the cloud.</p>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute bottom-20 font-semibold text-xs text-black' duration={2}>
+                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
                                 {"React - AWS - Spring Boot"}
                             </TextShimmerWave>
+                            
+                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A full-stack Cloud Storage website, using S3,  </p>
+                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">Cloudfront, RDS, Elastic Beanstalk and JWT </p>
+                            <p className="absolute bottom-34 left-11 font-semibold text-xs text-black"> authentication.</p>
+
+                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Users can Upload, Download and Delete their  </p>
+                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">files to and from the cloud.</p>
+
+
                             </>
                         }/>
 
@@ -67,19 +68,20 @@ function Home() {
                             <img src="/diamonds.png" className="absolute top-4 left-3 w-10"/>
                             <img src="/diamonds.png" className="absolute bottom-4 right-3 w-10 rotate-180"/>
 
-                            <img src="./bloodsticker2.png" className="absolute rotate-23 top-11 opacity-100 h-50 w-max p-8 z-6"/>
+                            <img src="./bloodsticker2.png" className="absolute rotate-23 top-21 opacity-100 h-50 w-max p-8 z-6"/>
                             <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-30 top-4.5">BloodSend</div>
-                            
-                            <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
-                            <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A full-stack express.js website which helps</p>
-                            <p className="absolute bottom-40 left-11 font-semibold text-xs text-black">blood donors match with blood-seekers.</p>
 
-                            <p className="absolute bottom-30 left-9 font-semibold text-xs text-black">• Users can create accounts, filter through a</p>
-                            <p className="absolute bottom-26 left-11 font-semibold text-xs text-black">database of users to find a potential donor.</p>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute bottom-20 font-semibold text-xs text-black' duration={2}>
+                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
                                 {"Express.js - MongoDB"}
                             </TextShimmerWave>
+                            
+                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A full-stack express.js website which helps</p>
+                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">blood donors match with blood-seekers.</p>
+
+                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Users can create accounts, filter through a</p>
+                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">database of users to find a potential donor.</p>
+
+
                             </>
                         }/>
 
@@ -89,20 +91,22 @@ function Home() {
                             <img src="/spades.png" className="absolute top-4 left-3 w-9"/>
                             <img src="/spades.png" className="absolute bottom-4 right-3 w-9 rotate-180"/>
 
-                            <img src="./posturesticker3.png" className="absolute rotate-353 top-10 opacity-100 h-50 w-max p-8 z-4"/>
+                            <img src="./posturesticker3.png" className="absolute rotate-353 top-22 opacity-100 h-50 w-max p-8 z-4"/>
 
                             <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-25 top-5">Posture Checker</div>
-                            
-                            <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
-                            <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A Chrome Timer which reminds you to </p>
-                            <p className="absolute bottom-40 left-11 font-semibold text-xs text-black">straighten your posture with notifications. </p>
 
-                            <p className="absolute bottom-30 left-9 font-semibold text-xs text-black">• Has organically attracted 15–20 weekly </p>
-                            <p className="absolute bottom-26 left-11 font-semibold text-xs text-black">active users.</p>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute bottom-20 font-semibold text-xs text-black' duration={2}>
+                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
                                 {"Javascript - Jquery"}
                             </TextShimmerWave>
+                            
+
+                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A Chrome Timer which reminds you to </p>
+                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">straighten your posture with notifications. </p>
+
+                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Has organically attracted 15–20 weekly </p>
+                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">active users.</p>
+
+                            
                             </>
                         }/>
 
@@ -114,18 +118,19 @@ function Home() {
 
                             <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-33 top-5">Gre.View</div>
 
-                            <p className="absolute top-23 text-black text-2xl font-bold h-50 w-max p-8 z-4">WIP</p>
+                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
+                                {"React - AWS - Spring Boot"}
+                            </TextShimmerWave>
 
-                            <p className="absolute font-bold font-orbitron bottom-50 text-md text-black">About</p>
-                            <p className="absolute bottom-44 left-9 font-semibold text-xs text-black">• A map website for students of Greenwich</p>
+                            <p className="absolute top-36 text-black text-2xl font-bold h-50 w-max p-8 z-4">WIP</p>
+
+                            <p className="absolute bottom-44 left-11 font-semibold text-xs text-black">A map website for students of Greenwich</p>
                             <p className="absolute bottom-40 left-11 font-semibold text-xs text-black"> which lets student find hidden local returants</p>
                             <p className="absolute bottom-36 left-11 font-semibold text-xs text-black"> rated and reccomended by other students.</p>
 
-                            <p className="absolute bottom-30 left-9 font-semibold text-xs text-black">• I'm currently working on this project!</p>
+                            <p className="absolute bottom-30 left-11 font-semibold text-xs text-black">I'm currently working on this project!</p>
 
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute bottom-20 font-semibold text-xs text-black' duration={2}>
-                                {"React - AWS - Spring Boot"}
-                            </TextShimmerWave>
+                            
                             </>                        
                         </Card>
                     </div>
