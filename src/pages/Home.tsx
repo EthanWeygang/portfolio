@@ -135,7 +135,7 @@ function Home() {
                         </Card>
                     </div>
                 </div>
-                <div className="text-white opacity-20">
+                <div className="text-white opacity-90">
                     <AnimatePresence mode="wait">
                         <motion.span
                             key={cardClicked ? "clicked" : "initial"}
