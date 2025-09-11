@@ -5,7 +5,7 @@ import HoverWord from "../components/HoverWord";
 import Info from "../components/Info";
 import Card from "../components/Card";
 import Background from "../components/Background";
-import { TextShimmerWave } from "../../components/motion-primitives/text-shimmer-wave";
+import {DialogClose, DialogDescription, DialogHeader, DialogTitle } from "../../components/motion-primitives/dialog";
 import About from "../components/About";
 import Bio from "../components/Bio";
 import { useState } from "react";
@@ -39,99 +39,139 @@ function Home() {
                     <div className="flex w-full gap-x-6 justify-center h-full items-center pt-46">
 
                         {/* Nimbus */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://dx26d5982gukc.cloudfront.net/"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"hearts"} children={
                             <>
-                            <img src="/hearts.png" className="absolute top-2.5 left-3 w-10.5"/>
-                            <img src="/hearts.png" className="absolute bottom-4 right-3 w-10.5 rotate-180"/>
-                            <img src="./nimbussticker2.png" className="absolute top-24 opacity-100 h-45 w-max p-8 z-6"/>
-                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-34 top-4.5">Nimbus</div>
+                            <DialogHeader>
+                            <DialogTitle className='text-white text-center text-3xl mb-8'>
+                                Nimbus Cloud Storage
+                            </DialogTitle>
+                            <DialogDescription className='text-white text-left'>
+                                Nibus is a full-stack Cloud Storage website, using S3, Cloudfront, RDS, Elastic Beanstalk and JWT authentication.
+                                <br/>
+                                <br/>
+                                Users can Upload, Download and Delete their files to and from the cloud.
+                                <br/>
+                                <br/>
+                                <div className="text-center mt-4">
+                                React - AWS - Spring Boot
+                                </div>
+                            </DialogDescription>
+                            </DialogHeader>
+                            <div className='mt-6 flex flex-col space-y-4'>
+                            <label htmlFor='name' className='sr-only'>
+                                Email
+                            </label>
 
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
-                                {"React - AWS - Spring Boot"}
-                            </TextShimmerWave>
-                            
-                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A full-stack Cloud Storage website, using S3,  </p>
-                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">Cloudfront, RDS, Elastic Beanstalk and JWT </p>
-                            <p className="absolute bottom-34 left-11 font-semibold text-xs text-black"> authentication.</p>
-
-                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Users can Upload, Download and Delete their  </p>
-                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">files to and from the cloud.</p>
-
-
+                            <button
+                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
+                                onClick={() => {
+                                    if (typeof window !== 'undefined') {
+                                        window.open('https://dx26d5982gukc.cloudfront.net/', '_blank', 'noopener,noreferrer');
+                                    }
+                                }}
+                            >
+                                Visit Project
+                            </button>
+                            </div>
+                            <DialogClose />
                             </>
                         }/>
 
-
+                        
                         {/* Bloodsend */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://bloodsend.onrender.com/"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"spades"} children={
                             <>
-                            <img src="/diamonds.png" className="absolute top-4 left-3 w-10"/>
-                            <img src="/diamonds.png" className="absolute bottom-4 right-3 w-10 rotate-180"/>
+                            <DialogHeader>
+                            <DialogTitle className='text-white text-center text-3xl mb-8'>
+                                Bloodsend
+                            </DialogTitle>
+                            <DialogDescription className='text-white text-left'>
+                                A full-stack express.js website which helps blood donors match with blood-seekers.
+                                <br/>
+                                <br/>
+                                Users can create accounts, filter through adatabase of users to find a potential donor.
+                                <br/>
+                                <br/>
+                                <div className="text-center mt-4">
+                                Express.js - MongoDB
+                                </div>
+                            </DialogDescription>
+                            </DialogHeader>
+                            <div className='mt-6 flex flex-col space-y-4'>
 
-                            <img src="./bloodsticker2.png" className="absolute rotate-23 top-21 opacity-100 h-50 w-max p-8 z-6"/>
-                            <div className="absolute text-md font-orbitron text-[#000000] font-bold z-6 left-30 top-4.5">BloodSend</div>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
-                                {"Express.js - MongoDB"}
-                            </TextShimmerWave>
-                            
-                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A full-stack express.js website which helps</p>
-                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">blood donors match with blood-seekers.</p>
-
-                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Users can create accounts, filter through a</p>
-                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">database of users to find a potential donor.</p>
-
-
+                            <button
+                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
+                                onClick={() => {
+                                    if (typeof window !== 'undefined') {
+                                        window.open('https://bloodsend.onrender.com/', '_blank', 'noopener,noreferrer');
+                                    }
+                                }}
+                            >
+                                Visit Project
+                            </button>
+                            </div>
+                            <DialogClose />
                             </>
                         }/>
 
                         {/* Posture Checker */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""} link={"https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"diamonds"} children={
                             <>
-                            <img src="/spades.png" className="absolute top-4 left-3 w-9"/>
-                            <img src="/spades.png" className="absolute bottom-4 right-3 w-9 rotate-180"/>
+                            <DialogHeader>
+                            <DialogTitle className='text-white text-center text-3xl mb-8'>
+                                Posture Checker
+                            </DialogTitle>
+                            <DialogDescription className='text-white text-left'>
+                                A Chrome Timer which reminds you to straighten your posture with notifications.
+                                <br/>
+                                <br/>
+                                Has organically attracted 15–20 weeklyactive users.
+                                <br/>
+                                <br/>
+                                <div className="text-center mt-4">
+                                Javascript - Jquery
+                                </div>
+                            </DialogDescription>
+                            </DialogHeader>
+                            <div className='mt-6 flex flex-col space-y-4'>
 
-                            <img src="./posturesticker3.png" className="absolute rotate-353 top-22 opacity-100 h-50 w-max p-8 z-4"/>
-
-                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-25 top-5">Posture Checker</div>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
-                                {"Javascript - Jquery"}
-                            </TextShimmerWave>
-                            
-
-                            <p className="absolute bottom-42 left-11 font-semibold text-xs text-black">A Chrome Timer which reminds you to </p>
-                            <p className="absolute bottom-38 left-11 font-semibold text-xs text-black">straighten your posture with notifications. </p>
-
-                            <p className="absolute bottom-28 left-11 font-semibold text-xs text-black">Has organically attracted 15–20 weekly </p>
-                            <p className="absolute bottom-24 left-11 font-semibold text-xs text-black">active users.</p>
-
-                            
+                            <button
+                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
+                                onClick={() => {
+                                    if (typeof window !== 'undefined') {
+                                        window.open('https://chromewebstore.google.com/detail/posture-checker/pgdiaifhpkncmcbbpmidjbebohbdjggb', '_blank', 'noopener,noreferrer');
+                                    }
+                                }}
+                            >
+                                Visit Project
+                            </button>
+                            </div>
+                            <DialogClose />
                             </>
                         }/>
 
                         {/* Gre.View */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={""}>
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"clubs"}>
                             <>
-                            <img src="/clubs.png" className="absolute top-4 left-3 w-13"/>
-                            <img src="/clubs.png" className="absolute bottom-4 right-3 w-13 rotate-180"/>
-
-                            <div className="absolute text-sm font-orbitron text-[#000000] font-extrabold z-6 left-33 top-5">Gre.View</div>
-
-                            <TextShimmerWave className='[--base-color:#000000] [--base-gradient-color:#000000] absolute top-15 font-semibold text-xs text-black' duration={2}>
-                                {"React - AWS - Spring Boot"}
-                            </TextShimmerWave>
-
-                            <p className="absolute top-36 text-black text-2xl font-bold h-50 w-max p-8 z-4">WIP</p>
-
-                            <p className="absolute bottom-44 left-11 font-semibold text-xs text-black">A map website for students of Greenwich</p>
-                            <p className="absolute bottom-40 left-11 font-semibold text-xs text-black"> which lets student find hidden local returants</p>
-                            <p className="absolute bottom-36 left-11 font-semibold text-xs text-black"> rated and reccomended by other students.</p>
-
-                            <p className="absolute bottom-30 left-11 font-semibold text-xs text-black">I'm currently working on this project!</p>
-
-                            
-                            </>                        
+                            <DialogHeader>
+                            <DialogTitle className='text-white text-center text-3xl mb-8'>
+                                Gre.View
+                            </DialogTitle>
+                            <DialogDescription className='text-white text-left'>
+                                A map website for students of Greenwich which lets student find hidden local returants rated and reccommended by other students.
+                                <br/>
+                                <br/>
+                                I'm currently working on this project!
+                                <br/>
+                                <br/>
+                                <div className="text-center mt-4">
+                                React - AWS - Spring Boot
+                                </div>
+                            </DialogDescription>
+                            </DialogHeader>
+                            <div className='mt-6 flex flex-col space-y-4'/>
+                            <DialogClose />
+                            </>                       
                         </Card>
                     </div>
                 </div>
@@ -144,7 +184,7 @@ function Home() {
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.3 }}
                         >
-                            {!cardClicked ? "Click the cards" : "Click again to visit the project"}
+                            {!cardClicked ? "Click the cards" : "Click the cards again to read about the projects"}
                         </motion.span>
                     </AnimatePresence>
                 </div>
