@@ -45,7 +45,7 @@ function Home() {
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
                                 Nimbus Cloud Storage
                             </DialogTitle>
-                            <DialogDescription className='text-white text-left'>
+                            <DialogDescription className='text-white text-center'>
                                 Nibus is a full-stack Cloud Storage website, using S3, Cloudfront, RDS, Elastic Beanstalk and JWT authentication.
                                 <br/>
                                 <br/>
@@ -85,11 +85,11 @@ function Home() {
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
                                 Posture Checker
                             </DialogTitle>
-                            <DialogDescription className='text-white text-left'>
-                                A Chrome Timer which reminds you to straighten your posture with notifications.
+                            <DialogDescription className='text-white text-center'>
+                                Posture Checker is a Chrome extension timer which reminds you to straighten your posture with repeating notifications.
                                 <br/>
                                 <br/>
-                                Has organically attracted 15–20 weekly active users.
+                                The extension has organically attracted 15–20 weekly active users.
                                 <br/>
                                 <br/>
                                 <div className="text-center mt-4">
@@ -121,8 +121,8 @@ function Home() {
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
                                 Bloodsend
                             </DialogTitle>
-                            <DialogDescription className='text-white text-left'>
-                                A full-stack express.js website which helps blood donors match with blood-seekers.
+                            <DialogDescription className='text-white text-center'>
+                                Bloodsend is a full-stack express.js website which helps blood donors match with blood-seekers.
                                 <br/>
                                 <br/>
                                 Users can create accounts, filter through a database of users to find a potential donor.
@@ -158,8 +158,8 @@ function Home() {
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
                                 Gre.View
                             </DialogTitle>
-                            <DialogDescription className='text-white text-left'>
-                                A map website for students of Greenwich which lets student find hidden local returants rated and recommended by other students.
+                            <DialogDescription className='text-white text-center'>
+                                Gre.View is a map-based site for University of Greenwich students that helps them discover and rate local, student-recommended restaurants.
                                 <br/>
                                 <br/>
                                 I'm currently working on this project!
