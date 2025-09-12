@@ -38,8 +38,8 @@ function Home() {
                 <div id="projects" className="flex w-full h-160">
                     <div className="flex w-full gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 justify-center h-full items-center pt-46 px-4">
 
-                        {/* Nimbus */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"hearts"} children={
+                        {/* Nimbus Cloud */}
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"diamonds"} children={
                             <>
                             <DialogHeader>
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
@@ -63,7 +63,7 @@ function Home() {
                             </label>
 
                             <button
-                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
+                                className='inline-flex items-center justify-center self-center hover:bg-[#0B2142] rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
                                 onClick={() => {
                                     if (typeof window !== 'undefined') {
                                         window.open('https://dx26d5982gukc.cloudfront.net/', '_blank', 'noopener,noreferrer');
@@ -76,46 +76,10 @@ function Home() {
                             <DialogClose />
                             </>
                         }/>
-
                         
-                        {/* Bloodsend */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"spades"} children={
-                            <>
-                            <DialogHeader>
-                            <DialogTitle className='text-white text-center text-3xl mb-8'>
-                                Bloodsend
-                            </DialogTitle>
-                            <DialogDescription className='text-white text-left'>
-                                A full-stack express.js website which helps blood donors match with blood-seekers.
-                                <br/>
-                                <br/>
-                                Users can create accounts, filter through adatabase of users to find a potential donor.
-                                <br/>
-                                <br/>
-                                <div className="text-center mt-4">
-                                Express.js - MongoDB
-                                </div>
-                            </DialogDescription>
-                            </DialogHeader>
-                            <div className='mt-6 flex flex-col space-y-4'>
-
-                            <button
-                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
-                                onClick={() => {
-                                    if (typeof window !== 'undefined') {
-                                        window.open('https://bloodsend.onrender.com/', '_blank', 'noopener,noreferrer');
-                                    }
-                                }}
-                            >
-                                Visit Project
-                            </button>
-                            </div>
-                            <DialogClose />
-                            </>
-                        }/>
-
+                        
                         {/* Posture Checker */}
-                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"diamonds"} children={
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"spades"} children={
                             <>
                             <DialogHeader>
                             <DialogTitle className='text-white text-center text-3xl mb-8'>
@@ -125,7 +89,7 @@ function Home() {
                                 A Chrome Timer which reminds you to straighten your posture with notifications.
                                 <br/>
                                 <br/>
-                                Has organically attracted 15–20 weeklyactive users.
+                                Has organically attracted 15–20 weekly active users.
                                 <br/>
                                 <br/>
                                 <div className="text-center mt-4">
@@ -150,6 +114,43 @@ function Home() {
                             </>
                         }/>
 
+                        {/* BloodSend */}
+                        <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"hearts"} children={
+                            <>
+                            <DialogHeader>
+                            <DialogTitle className='text-white text-center text-3xl mb-8'>
+                                Bloodsend
+                            </DialogTitle>
+                            <DialogDescription className='text-white text-left'>
+                                A full-stack express.js website which helps blood donors match with blood-seekers.
+                                <br/>
+                                <br/>
+                                Users can create accounts, filter through a database of users to find a potential donor.
+                                <br/>
+                                <br/>
+                                <div className="text-center mt-4">
+                                Express.js - MongoDB
+                                </div>
+                            </DialogDescription>
+                            </DialogHeader>
+                            <div className='mt-6 flex flex-col space-y-4'>
+
+                            <button
+                                className='inline-flex items-center justify-center self-center rounded-lg bg-[#0f2b57] px-4 py-2 text-sm font-medium text-zinc-50 dark:bg-white dark:text-zinc-900'
+                                onClick={() => {
+                                    if (typeof window !== 'undefined') {
+                                        window.open('https://bloodsend.onrender.com/', '_blank', 'noopener,noreferrer');
+                                    }
+                                }}
+                            >
+                                Visit Project
+                            </button>
+                            </div>
+                            <DialogClose />
+                            </>
+                        }/>
+
+
                         {/* Gre.View */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"clubs"}>
                             <>
@@ -158,7 +159,7 @@ function Home() {
                                 Gre.View
                             </DialogTitle>
                             <DialogDescription className='text-white text-left'>
-                                A map website for students of Greenwich which lets student find hidden local returants rated and reccommended by other students.
+                                A map website for students of Greenwich which lets student find hidden local returants rated and recommended by other students.
                                 <br/>
                                 <br/>
                                 I'm currently working on this project!
@@ -189,7 +190,13 @@ function Home() {
                     </AnimatePresence>
                 </div>
                 
-                <div className="h-[200px]" />
+                {/* This Div is important, its stops the weird bug that causes the cards to rotate and be clickable beneath where they actually are */}
+                {/* It just covers the ghost card so its not being hovered over/ clicked on */}
+                <div className="relative w-full h-70">
+                        <div className="absolute top-0 w-full h-[800px]">
+                        </div>
+                </div>
+
 
                 {/* About */}
                 <div id="about" className="flex w-full justify-between items-start gap-8">

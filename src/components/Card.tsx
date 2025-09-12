@@ -32,7 +32,7 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
                     <>
                         <img src="/diamonds.png" className="absolute top-2 left-2 w-6 sm:top-3 sm:left-2.5 sm:w-8 md:top-3.5 md:left-3 md:w-9 lg:top-4 lg:left-3 lg:w-10"/>
                         <img src="/diamonds.png" className="absolute bottom-2 right-2 w-6 sm:bottom-3 sm:right-2.5 sm:w-8 md:bottom-3.5 md:right-3 md:w-9 lg:bottom-4 lg:right-3 lg:w-10 rotate-180"/>
-                        <img src="./bloodsticker2.png" className="absolute rotate-23 top-16 sm:top-20 md:top-24 lg:top-28 opacity-100 h-32 sm:h-40 md:h-45 lg:h-50 w-max p-4 sm:p-6 md:p-7 lg:p-8 z-6"/>
+                        <img src="./nimbussticker2.png" className="absolute top-18 sm:top-22 md:top-26 lg:top-32 opacity-100 h-28 sm:h-36 md:h-40 lg:h-45 w-max p-4 sm:p-6 md:p-7 lg:p-8 z-6"/>
                     </>
                 );
             case 'spades':
@@ -48,7 +48,7 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
                     <>
                         <img src="/hearts.png" className="absolute top-1.5 left-2 w-6 sm:top-2 sm:left-2.5 sm:w-8 md:top-2.5 md:left-3 md:w-9.5 lg:top-2.5 lg:left-3 lg:w-10.5"/>
                         <img src="/hearts.png" className="absolute bottom-2 right-2 w-6 sm:bottom-3 sm:right-2.5 sm:w-8 md:bottom-3.5 md:right-3 md:w-9.5 lg:bottom-4 lg:right-3 lg:w-10.5 rotate-180"/>
-                        <img src="./nimbussticker2.png" className="absolute top-18 sm:top-22 md:top-26 lg:top-32 opacity-100 h-28 sm:h-36 md:h-40 lg:h-45 w-max p-4 sm:p-6 md:p-7 lg:p-8 z-6"/>
+                        <img src="./bloodsticker2.png" className="absolute rotate-23 top-16 sm:top-20 md:top-24 lg:top-28 opacity-100 h-32 sm:h-40 md:h-45 lg:h-50 w-max p-4 sm:p-6 md:p-7 lg:p-8 z-6"/>
                     </>
                 );
 
@@ -67,7 +67,7 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
         <Tilt className="relative mx-2 sm:mx-3 md:mx-4 lg:mx-6 mb-50 flex-shrink-0">
             
             {/* Card's Back*/}
-            <motion.img src="/cardback2.jpg" className={`rounded-3xl h-80 sm:h-96 md:h-105 lg:h-120 cursor-pointer brightness-80 ${clicked ? 'pointer-events-none' : ''}`} onClick={() => {setClicked(true); onCardClick?.();}} 
+            <motion.img src="/cardback2.jpg" className={`rounded-3xl h-80 sm:h-96 md:h-105 lg:h-120 brightness-80 cursor-pointer ${clicked ? 'pointer-events-none' : ''}`} onClick={() => {setClicked(true); onCardClick?.();}} 
             animate={
                 clicked ? { y: -900, opacity: [1, 0, 0]} : {y: 0, opacity: [0,1]}
             }
@@ -92,8 +92,8 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
 
             {/* Card's Front */}
             <Dialog>
-                <DialogTrigger className="absolute top-150 p-0 border-0 bg-transparent hover:bg-transparent focus:bg-transparent"> 
-                    <motion.div className={`bg-gray-200 h-80 w-60 sm:h-96 sm:w-68 md:h-105 md:w-76 lg:h-120 lg:w-85 rounded-3xl flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-white`}
+                <DialogTrigger className={`absolute top-150 p-0 border-0 bg-transparent hover:bg-transparent focus:bg-transparent ${clicked ? 'cursor-pointer' : 'pointer-events-none'}`}> 
+                    <motion.div className={`bg-gray-200 h-80 w-60 sm:h-96 sm:w-68 md:h-105 md:w-76 lg:h-120 lg:w-85 rounded-3xl cursor-pointer flex overflow-hidden ${clicked ? 'cursor-pointer' : 'pointer-events-none'} bg-white`}
                     style={{
                         backgroundImage: "url('/card-texture.jpg')",
                         backgroundRepeat: 'repeat',
@@ -117,21 +117,18 @@ function Card({ image, bg, children, link, onCardClick }: CardProps){
                         }
                     }}>
                         
-                        <div className="flex items-center justify-center w-full h-full absolute">
+                        <div className={`flex items-center justify-center w-full h-full absolute `}>
                             {cardType}
                         </div>
 
                     </motion.div>
                 </DialogTrigger>
                 
-                <DialogContent className='w-full max-w-md bg-slate-900 p-6'>
+                <DialogContent className={`w-full max-w-md bg-slate-900 p-6`}>
                     {children}
                     <DialogClose />
                 </DialogContent>
             </Dialog>
-            
-
-            
         </Tilt>
 
         </>
