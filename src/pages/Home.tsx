@@ -36,7 +36,7 @@ function Home() {
 
                 {/* Projects */}
                 <div id="projects" className="flex w-full h-160">
-                    <div className="flex w-full gap-x-6 justify-center h-full items-center pt-46">
+                    <div className="flex w-full gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 justify-center h-full items-center pt-46 px-4">
 
                         {/* Nimbus */}
                         <Card onCardClick={() => setCardClicked(true)} image={"./template.png"} bg={"hearts"} children={
