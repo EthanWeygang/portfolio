@@ -19,7 +19,7 @@ function About(){
 
                 <div className="text-lg flex flex-col justify-start space-y-4">
                     <div>
-                    I'm a third-year Computer Science student who enjoys building full-stack applications using Java, Spring Boot, AWS, Docker and React (but I'm constantly trying new technologies!!).
+                    I'm a third-year Computer Science student who enjoys building full-stack applications using Java, Spring Boot, AWS, Docker and React (but I'm constantly trying new technologies!).
                     </div>
                     <div>
                         I'm passionate about Cloud Engineering and Software Development, with multiple personal projects already made, and many more in the pipeline!

@@ -89,7 +89,7 @@ function Home() {
                                 Posture Checker is a Chrome extension timer which reminds you to straighten your posture with repeating notifications.
                                 <br/>
                                 <br/>
-                                The extension has organically attracted 15–20 weekly active users.
+                                The extension has organically attracted 20+ weekly active users.
                                 <br/>
                                 <br/>
                                 <div className="text-center mt-4">
