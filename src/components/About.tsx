@@ -4,7 +4,8 @@ import { InView } from "../../components/motion-primitives/in-view";
 
 function About(){
     return(
-        <>
+        <div className="flex flex-col md:flex-row w-full items-start gap-8">
+        <div className="flex-1">
         <InView
           variants={{
             hidden: { opacity: 0, y: 100, filter: 'blur(4px)' },
@@ -13,7 +14,7 @@ function About(){
           viewOptions={{ margin: '0px 0px -200px 0px' }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-            <div className="flex flex-col ml-[50px] flex-9">
+            <div className="flex flex-col md:ml-[50px]">
 
                 <div className="text-4xl pb-10">About Me</div>
 
@@ -25,14 +26,14 @@ function About(){
                         I'm passionate about Cloud Engineering and Software Development, with multiple personal projects already made, and many more in the pipeline!
                     </div>
                     <div>
-                        Currently, I'm preparing to take the AWS Cloud Practitioner certification and actively seeking internships for the summer.
+                        Currently, I'm actively seeking internships or graduate roles for the summer.
                     </div>
                 </div>
             </div>
         </InView>
-
-        <div className="flex-2"/>
+        </div>
         
+        <div className="flex-1">
         <InView
             variants={{
                 hidden: { opacity: 0, y: 100, filter: 'blur(4px)' },
@@ -41,7 +42,7 @@ function About(){
             viewOptions={{ margin: '0px 0px -200px 0px' }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
-            <div className="flex flex-col mr-[50px] flex-9">
+            <div className="flex flex-col md:mr-[50px]">
                 <div className="text-4xl pb-10 pl-1">Technical Skills</div>
                 <div className="flex flex-wrap gap-6 justify-start">
                     <DiJavascript1 size={64} className="hover:scale-110 transition duration-200 ease-in-out"/>
@@ -54,9 +55,13 @@ function About(){
                     <DiPostgresql size={64} className="hover:scale-110 transition duration-200 ease-in-out"/>
                     <SiAmazonwebservices size={64} className="hover:scale-110 transition duration-200 ease-in-out"/>
                 </div>
+                <a href="https://www.credly.com/badges/ff45f975-2614-4df0-99e0-3663d104c118" target="_blank" rel="noopener noreferrer">
+                    <img style={{height: "200px", marginTop: "50px"}} src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="Credly Badge" />
+                </a>
             </div>
         </InView>
-        </>
+        </div>
+        </div>
     )
 }
 export default About;

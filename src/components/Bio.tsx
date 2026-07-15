@@ -20,7 +20,7 @@ function Bio(){
 
             <div className="h-[60px]" />
 
-        <motion.div className="text-xl text-white mt-10 flex flex-col justify-center items-center" animate={{
+        <motion.div className="text-xl text-white mt-10 flex flex-col justify-center items-center text-center px-4" animate={{
             opacity: 1,
             }} 
             initial={{

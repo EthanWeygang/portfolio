@@ -17,11 +17,7 @@ function Navbar(){
 return(
 
     <nav className="flex fixed w-full justify-between items-center z-10 space-x-1 my-8">
-        <div className="flex-8"/>
-        {/* <motion.div className="flex-3 px-2 mt-6 flex justify-center bg-transparent" initial={{y: -190 }} animate={{y: 0}} transition={{duration: 1.5, ease: "backOut", delay: 2}}>
-            <img src={"nav.svg"} />
-
-        </motion.div> */}
+        <div className="flex-1 sm:flex-8"/>
         
          <motion.div className="relative flex-3 px-2 mt-6 flex" initial={{y: -110 }} animate={{y: 0}} transition={{duration: 1.5, ease: "backOut", delay: 2}}>
                 <GlowEffect
@@ -55,7 +51,7 @@ return(
             </div>
          </motion.div>
         
-        <div className="flex-8"/>
+        <div className="flex-1 sm:flex-8"/>
     </nav>
 )
 }
